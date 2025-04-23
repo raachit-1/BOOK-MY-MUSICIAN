@@ -1,0 +1,144 @@
+\<!DOCTYPE html>\<html lang="en">
+\<head>
+\<meta charset="UTF-8">
+\<meta name="viewport" content="width=device-width, initial-scale=1.0">
+\<title>Book My Musician\</title>
+\<style>
+body {
+background: linear-gradient(to bottom, #000000, #ffffff);
+color: white;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: rgba(0, 0, 0, 0.8);
+text-align: center;
+padding: 20px;
+}
+nav {
+display: flex;
+justify-content: center;
+background-color: #222;
+}
+nav a {
+color: white;
+padding: 14px 20px;
+text-decoration: none;
+}
+nav a:hover {
+background-color: #444;
+}
+.page {
+display: none;
+padding: 20px;
+}
+.active {
+display: block;
+}
+.instrument-images img, .gods-images img, .event-images img {
+width: 150px;
+height: auto;
+margin: 10px;
+border-radius: 10px;
+}
+.form-group {
+margin-bottom: 15px;
+}
+label, input, textarea {
+display: block;
+width: 100%;
+}
+input, textarea {
+padding: 8px;
+margin-top: 5px;
+}
+button {
+padding: 10px 20px;
+background-color: #444;
+color: white;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background-color: #666;
+}
+\</style>
+\<script>
+function showPage(id) {
+document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+\</script>
+\</head>
+\<body>
+\<header>
+\<h1>Book My Musician\</h1>
+\</header>
+\<nav>
+\<a href="#" onclick="showPage('register')">Registration\</a>
+\<a href="#" onclick="showPage('info')">Instruments Info\</a>
+\<a href="#" onclick="showPage('events')">Events\</a>
+\<a href="#" onclick="showPage('contact')">Book Now\</a>
+\</nav>\<div id="register" class="page active">
+\<h2>Register\</h2>
+\<form>
+\<div class="form-group">
+\<label for="name">Full Name:\</label>
+\<input type="text" id="name" name="name" required>
+\</div>
+\<div class="form-group">
+\<label for="email">Email:\</label>
+\<input type="email" id="email" name="email" required>
+\</div>
+\<div class="form-group">
+\<label for="instrument">Instrument/Singer:\</label>
+\<input type="text" id="instrument" name="instrument" required>
+\</div>
+\<div class="form-group">
+\<label for="details">Additional Details:\</label>
+\<textarea id="details" name="details">\</textarea>
+\</div>
+\<button type="submit">Register\</button>
+\</form>
+\</div>
+
+\<div id="info" class="page">
+\<h2>Instruments & Musicians\</h2>
+\<div class="instrument-images">
+\<img src="keyboard.jpg" alt="Keyboard">
+\<img src="tabla.jpg" alt="Tabla">
+\<img src="flute.jpg" alt="Flute">
+\<img src="octapad.jpg" alt="Octapad">
+\<img src="dholak.jpg" alt="Dholak">
+\<img src="guitar.jpg" alt="Guitar">
+\<img src="harmonium.jpg" alt="Harmonium">
+\<img src="singer.jpg" alt="Singer">
+\</div>
+\</div>
+
+\<div id="events" class="page">
+\<h2>Events\</h2>
+\<div class="event-images">
+\<img src="sunderkand.jpg" alt="Sunderkand">
+\<p>Sunderkand\</p>
+\<img src="bhajan.jpg" alt="Bhajan Sandhya">
+\<p>Bhajan Sandhya\</p>
+\<!-- Add more events as needed -->
+\</div>
+\</div>
+
+\<div id="contact" class="page">
+\<h2>Book a Musician\</h2>
+\<p>Call us at: \<strong>9826224803\</strong>\</p>
+\<p>We provide: Keyboard, Tabla, Flute, Octapad, Dholak, Guitar, Harmonium Players & Singers\</p>
+\</div>
+
+\<div class="gods-images">
+\<img src="ganesh.jpg" alt="Lord Ganesha">
+\<img src="saraswati.jpg" alt="Goddess Saraswati">
+\<!-- Add more god/goddess images -->
+\</div>
+
+\</body>
+\</html>
